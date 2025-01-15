@@ -1,8 +1,5 @@
-from logging import raiseExceptions
-
 import requests
 from jsonschema import validate
-
 
 from schemas import get_user, post_user, update_user, register_user, error_register_user
 
@@ -50,6 +47,7 @@ def test_unsuccessful_user_registration():
     assert response.status_code == 400
     body = response.json()
     validate(body, error_register_user)
+
 
 def test_delete_user():
     response = requests.delete("https://reqres.in/api/users/2")

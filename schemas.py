@@ -96,84 +96,84 @@ update_user = {
 }
 
 register_user = {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "id": {
-      "type": "integer"
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "token": {
+            "type": "string"
+        }
     },
-    "token": {
-      "type": "string"
-    }
-  },
-  "required": [
-    "id",
-    "token"
-  ]
+    "required": [
+        "id",
+        "token"
+    ]
 }
 
 error_register_user = {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "error": {
-      "type": "string"
-    }
-  },
-  "required": [
-    "error"
-  ]
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "error": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "error"
+    ]
 }
 
 get_resource = {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "data": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "integer"
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "data": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "year": {
+                    "type": "integer"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "pantone_value": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "year",
+                "color",
+                "pantone_value"
+            ]
         },
-        "name": {
-          "type": "string"
-        },
-        "year": {
-          "type": "integer"
-        },
-        "color": {
-          "type": "string"
-        },
-        "pantone_value": {
-          "type": "string"
+        "support": {
+            "type": "object",
+            "properties": {
+                "url": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "url",
+                "text"
+            ]
         }
-      },
-      "required": [
-        "id",
-        "name",
-        "year",
-        "color",
-        "pantone_value"
-      ]
     },
-    "support": {
-      "type": "object",
-      "properties": {
-        "url": {
-          "type": "string"
-        },
-        "text": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "url",
-        "text"
-      ]
-    }
-  },
-  "required": [
-    "data",
-    "support"
-  ]
+    "required": [
+        "data",
+        "support"
+    ]
 }
