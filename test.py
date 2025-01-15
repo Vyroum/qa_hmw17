@@ -51,3 +51,8 @@ def test_unsuccessful_user_registration():
     body = response.json()
     validate(body, error_register_user)
 
+def test_delete_user():
+    response = requests.delete("https://reqres.in/api/users/2")
+    if response.text != "":
+        raise AssertionError("Response not empty!")
+    assert response.status_code == 204
